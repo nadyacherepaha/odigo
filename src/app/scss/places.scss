@@ -1,0 +1,79 @@
+.places {
+    margin-bottom: 131px;
+    &__caption {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 36px;
+    }
+    &__title {
+        margin-right: 15px;
+    }
+    &__view-all {
+        font-size: 16px;
+        color: #006DFE;
+        text-decoration: none;
+        padding-right: 59px;
+        background: url(../img/svg/arrow-right-ico.svg) no-repeat right center;
+
+        &:hover, &:focus {
+            opacity: .65;
+        }
+    }
+    &__card {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    &__card:hover .places__card-pic {
+        transform: scale(1.05);
+
+    }
+    &__card::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(21, 24, 36, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    &__card-pic {
+        width: 100%;
+        transition: .15s all;
+    }
+    &__card-pic_size_lg {
+        height: 354px;
+        object-fit: cover;
+    }
+    &__card-pic_size_sm {
+        height: 283px;
+        object-fit: cover;
+    }
+    &__card-title {
+        font-size: 50px;
+        line-height: 60px;
+        color: #fff;
+        position: absolute;
+        bottom: 27px;
+        left: 29px;
+        z-index: 3;
+    }
+    &__card-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+    }
+    .row {
+        margin: 0 -10px;
+    }
+    .col-xl-6, col-lg-6, .col-xl-4, .col-lg-4 {
+        padding: 0 10px;
+    }
+}
